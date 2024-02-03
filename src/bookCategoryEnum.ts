@@ -9,8 +9,6 @@
  */
 export enum BookCategory {
   Novel = "Novel",
-  Science = "Science",
-  Education = "Education",
   Poetry = "Poetry",
   Biography = "Biography",
 }
@@ -25,6 +23,8 @@ export enum BookCategory {
  * 輸出: 'Book category: Novel'
  */
 
-export function getBookCategory(category: string) {
+type BookCategoryType = keyof typeof BookCategory;
+
+export function getBookCategory(category: BookCategoryType) {
   return `Book category: ${category}`;
 }

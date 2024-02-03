@@ -11,10 +11,6 @@
  * 輸出: 'Input is a number: 123'
  */
 
-export function handleInput(input: number | string): string {
-  if (typeof input === "number") {
-    return `Input is a number: ${input.toString()}`;
-  } else {
-    return `Input is a string: ${input}`;
-  }
+export function handleInput(input: string | number) {
+  return `Input is a ${typeof input}: ${input}`;
 }

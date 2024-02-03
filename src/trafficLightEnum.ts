@@ -8,10 +8,12 @@
  * 輸出: 'The traffic light is Red'
  */
 export enum TrafficLight {
-  Red = "Red",
-  Yellow = "Yellow",
   Green = "Green",
+  Yellow = "Yellow",
+  Red = "Red",
 }
-export function getTrafficLightStatus(light: string) {
+
+type Light = keyof typeof TrafficLight;
+export function getTrafficLightStatus(light: Light) {
   return `The traffic light is ${light}`;
 }
